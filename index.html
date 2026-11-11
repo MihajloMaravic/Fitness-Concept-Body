@@ -70,7 +70,7 @@ nav.main a:hover,nav.main a.act{color:var(--rose)}
 #ind::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--rose)}
 .hcta{justify-self:end}
 .hcta .btn{padding:16px 28px;letter-spacing:.14em;transition:box-shadow .35s var(--e),background .35s var(--e),color .35s var(--e),transform .35s var(--e)}
-.hcta .btn.ring{box-shadow:0 0 0 2px var(--navy),0 0 0 3px var(--rose)}
+.hcta .btn.hot{box-shadow:0 0 0 2px var(--navy),0 0 0 3px var(--rose)}
 .burger{display:none;flex:none;width:48px;height:48px;border-radius:8px;border:1px solid rgba(244,240,232,.25);background:transparent;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer}
 .burger span{display:block;width:20px;height:1.5px;background:var(--ivory);border-radius:2px;transition:transform .35s var(--e),opacity .25s}
 #hdr.open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
@@ -801,7 +801,7 @@ footer{background:var(--navy);color:var(--ivory)}
     var link = active && nav.querySelector('a[data-nav="' + active + '"]');
     if (link) { ind.style.left = link.offsetLeft + 'px'; ind.style.top = link.offsetTop + 'px'; ind.style.width = link.offsetWidth + 'px'; ind.style.height = link.offsetHeight + 'px'; ind.style.opacity = 1; }
     else ind.style.opacity = 0;
-    hcta.classList.toggle('ring', active === 'zakazi');
+    hcta.classList.toggle('hot', active === 'zakazi');
     var z = document.getElementById('zakazi').getBoundingClientRect();
     var zVis = z.top < window.innerHeight && z.bottom > 0;
     var past = window.scrollY > window.innerHeight * 0.6;
